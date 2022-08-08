@@ -1,0 +1,112 @@
+body {
+
+    padding: 100px 0px 100px 0;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+.ball-wrap {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    animation-name: bounce, move-right, rotate-center;
+    animation-duration: 4s, 4s, 0.5s;
+    animation-timing-function: linear, linear, linear;
+    animation-iteration-count: infinite, infinite, infinite;
+}
+.ball__image {
+  width: 100%;
+  height: 100%;
+  animation-name: ball-container;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.shadow {
+  border: none;
+  width: 150px;
+  height: 40px;
+  position: absolute;
+  bottom: 200px;
+  left: 150px;
+  border-radius: 50%;
+  background: rgba(20, 20, 20, .1);
+  box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+
+  animation-name: shadow-bounce, move-right;
+  animation-duration: 4s, 4s;
+  animation-timing-function: linear, linear;
+  animation-iteration-count: infinite, infinite;
+}
+
+@keyframes shadow-bounce {
+    0% {transform: scale(0.15);}
+    12.5% {transform: scale(0.15);}
+
+    25% {transform: scale(0.65);}
+
+    37.5% {transform: scale(0.15);}
+
+    50% {transform: scale(0.65);}
+
+    62.5% {transform: scale(0.15);}
+
+    75% {transform: scale(0.65);}
+
+    87.5% {transform: scale(0.15);}
+
+    100% {transform: scale(0.65);}
+}
+@keyframes bounce {
+    0% {bottom: 800px; }
+
+    25% {bottom: 200px; }
+
+    37.5% {bottom: 700px; }
+
+    50% {bottom: 200px; }
+
+    62.5% {bottom: 600px; }
+
+    75% {bottom: 200px; }
+
+    87.5% {bottom: 500px; }
+
+    100% {bottom: 200px; }
+}
+@keyframes move-right {
+    from {left: 0;}
+    to {left: 100%;}
+}
+@keyframes rotate-center {
+    0% {transform: rotate(0);}
+
+    100% {transform: rotate(360deg);}
+}
+@keyframes ball-container {
+    0% {height: 100px;}
+
+    24.5% {height: 100px;}
+    25% {height: 80px;}
+    25.5% {height: 100px;}
+
+    37.5% {height: 100px;}
+
+    49.5% {height: 100px;}
+    50% {height: 80px;}
+    50.5% {height: 100px;}
+
+    62.5% {height: 100px;}
+
+    74.5% {height: 100px;}
+    75% {height: 80px;}
+    75.5% {height: 100px;}
+
+    87.5% {bottom: 500px; }
+
+    99.5% {height: 100px;}
+    100% {height: 80px;}
+}
